@@ -1,0 +1,50 @@
+﻿{
+    "name": "Simple course",
+    "shortDescription": "This template is a basic course format",
+    "thumbnail": "preview/thumbnail.png",
+    "previewImages": [
+        "preview/images/preview.jpg"
+    ],
+    "settingsUrls": {
+        "design": "settings/design/design.html",
+        "configure": "settings/configure/configure.html"
+    },
+    "languages": [
+        {
+            "code": "cn",
+            "url": "lang/cn.json"
+        },
+        {
+            "code": "nl",
+            "url": "lang/nl.json"
+        },
+        {
+            "code": "en",
+            "url": "lang/en.json"
+        },
+        {
+            "code": "fr",
+            "url": "lang/fr.json"
+        },
+        {
+            "code": "de",
+            "url": "lang/de.json"
+        },
+        {
+            "code": "it",
+            "url": "lang/it.json"
+        },        
+        {
+            "code": "pt-br",
+            "url": "lang/pt-br.json"
+        },
+        {
+            "code": "tr",
+            "url": "lang/tr.json"
+        },
+        {
+            "code": "ua",
+            "url": "lang/ua.json"
+        }
+    ]
+}

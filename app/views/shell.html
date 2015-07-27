@@ -1,0 +1,59 @@
+﻿<div class="header clearfix" data-bind="css: 'module-' + cssName()">
+    <section class="logo-holder">
+        <span class="logo-img">
+            <!-- ko if: viewSettings().rootLinkEnabled  -->
+            <!-- ko if: logoUrl -->
+            <a href="#objectives">
+                <img alt="" src="" data-bind="attr: { src: logoUrl }">
+            </a>
+            <!-- /ko -->
+            <!-- ko ifnot: logoUrl -->
+            <a href="#objectives">
+                <span class="default-logo"></span>
+            </a>
+            <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko ifnot: viewSettings().rootLinkEnabled -->
+            <!-- ko if: logoUrl -->
+            <img alt="" src="" data-bind="attr: { src: logoUrl }">
+            <!-- /ko -->
+            <!-- ko ifnot: logoUrl -->
+            <span class="default-logo"></span>
+            <!-- /ko -->
+            <!-- /ko -->
+        </span>
+        <span class="empty"></span>
+        <!-- ko if: $root.saveProgress -->
+        <span class="save-progress-section">
+            <span class="save-progress-btn-container">
+                <button class="save-progress-btn" data-bind="click: saveProgress, css: {'saved': !$root.isProgressDirty()}">
+                    <span class="btn-text-wrapper save-progress">
+                        <span class="btn-text">
+                            <span class="text" data-translate-title="[save my current progress]" data-translate-text="[save my current progress]">Save my current progress</span>
+                        </span>
+                    </span>
+                    <span class="btn-text-wrapper progress-saved">
+                        <span class="btn-text">
+                            <span class="text" data-translate-title="[progress has been saved]" data-translate-text="[progress has been saved]">Progress has been saved</span>
+                        </span>
+                    </span>
+                </button>
+            </span>
+        </span>
+        <!-- /ko -->
+    </section>
+</div>
+<div class="loader" data-bind="visible: isNavigatingToAnotherView()">
+    <div class="loader-container">
+        <div class="color-ball red"></div>
+        <div class="color-ball green"></div>
+        <div class="color-ball blue"></div>
+        <div class="color-ball yellow"></div>
+    </div>
+</div>
+<section id="content" class="content-wrapper" data-bind="visible: !isNavigatingToAnotherView()">
+    <!--ko router: { cacheViews: false, transition: 'defaultRouterTransition' }-->
+    <!--/ko-->
+</section>
+<div class="blockout" data-bind="css: { active: isClosed }"></div>
+<div data-bind="widget: {kind:'imagePreview'}"></div>
