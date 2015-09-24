@@ -16,6 +16,7 @@ define(function () {
     function initialize(question) {
         return Q.fcall(function() {
             viewModel.question = question;
+			viewModel.isAnswered(question.isAnswered);
 
             viewModel.dropspots = _.map(question.answers, function (answer) {
                 return {
